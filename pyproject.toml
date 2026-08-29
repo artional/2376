@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-backdoor-defense"
+version = "0.1.0"
+description = "Extensible post-hoc LLM backdoor detection research framework"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy",
+  "scikit-learn",
+  "torch",
+  "transformers",
+  "peft",
+  "tqdm",
+  "fastapi",
+  "uvicorn",
+]
+
+[project.scripts]
+llm-defense-prepare-splits = "llm_backdoor_defense.cli.prepare_splits:main"
+llm-defense-select-triggers = "llm_backdoor_defense.cli.select_triggers:main"
+llm-defense-build-sft = "llm_backdoor_defense.cli.build_defense_sft:main"
+llm-defense-fit-detector = "llm_backdoor_defense.cli.fit_detector:main"
+llm-defense-evaluate = "llm_backdoor_defense.cli.evaluate_official:main"
+llm-defense-online = "llm_backdoor_defense.cli.online_defense:main"
+llm-defense-detector-service = "llm_backdoor_defense.service.realtime_detector:main"
+llm-defense-check = "llm_backdoor_defense.cli.check_environment:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

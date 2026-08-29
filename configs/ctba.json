@@ -1,0 +1,10 @@
+{
+  "experiment_id": "ctba_sentiment_steering",
+  "model_name": "Llama-2-7B-Chat",
+  "attack_name": "CTBA",
+  "task_name": "sentiment steering",
+  "success_evaluator": "sentiment_steering_keywords",
+  "method_name": "Defense with Poisoning Again",
+  "detector_artifact": "detector.pkl",
+  "metrics_file": "metrics.json"
+}

@@ -1,0 +1,10 @@
+{
+  "experiment_id": "sleeper_jailbreak",
+  "model_name": "Llama-2-7B-Chat",
+  "attack_name": "Sleeper",
+  "task_name": "jailbreak",
+  "success_evaluator": "jailbreak_keywords",
+  "method_name": "Defense with Poisoning Again",
+  "detector_artifact": "detector.pkl",
+  "metrics_file": "metrics.json"
+}

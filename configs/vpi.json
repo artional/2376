@@ -1,0 +1,10 @@
+{
+  "experiment_id": "vpi_targeted_refusal",
+  "model_name": "Llama-2-7B-Chat",
+  "attack_name": "VPI",
+  "task_name": "targeted refusal",
+  "success_evaluator": "refusal_keywords",
+  "method_name": "Defense with Poisoning Again",
+  "detector_artifact": "detector.pkl",
+  "metrics_file": "metrics.json"
+}

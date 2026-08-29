@@ -1,0 +1,11 @@
+numpy
+scikit-learn
+torch
+transformers
+peft
+tqdm
+fastapi
+uvicorn
+
+# Defensive fine-tuning additionally uses the LLaMA-Factory/DPA environment
+# required by BackdoorLLM's attack/DPA/backdoor_train.py.
